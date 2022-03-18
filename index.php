@@ -8,6 +8,8 @@ require './Controllers/BaseController.php';
 require "./Controllers/LoginController.php";
 $login = new LoginController();
 
+// index
+
 if(isset($_SESSION['user_mail']) || $login->loginWithCookie()){  
     if(empty($_SESSION['user_mail'])){
         $_SESSION['user_mail'] = $_COOKIE['user_mail'];
